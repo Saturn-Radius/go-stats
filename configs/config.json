@@ -1,0 +1,65 @@
+{
+  "statas_db_config": {
+    "dialect": "mysql",
+    "db_path": "root:123456@(127.0.0.1:3306)/go-stat-mysql?charset=utf8&parseTime=True&loc=Local"
+  },
+  "chain_config": {
+    "bsc_start_height": 6694220,
+    "bsc_provider": "ws://18.133.119.1:58546",
+    "bsc_confirm_num": 5,
+    "bsc_fetch_interval": 2000,
+    "swap_factory": "0x59DA12BDc470C8e85cA26661Ee3DCD9B85247C88",
+    "reserve": 0.0,
+    "swap_event_topic": "0xd78ad95fa46c994b6551d0da85fc275fe613ce37657fb8d5e3d130840159d822",
+    "bep20": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+    "certificated_pairs": [
+      "0x4d338614fc25afe6edf3994f331b4bad32fb3c6a",
+      "0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82",
+      "0x2170ed0880ac9a755fd29b2688956bd959f933f8",
+      "0x947950bcc74888a40ffa2593c5798f11fc9124c4",
+      "0x67ee3cb086f8a16f34bee3ca72fad36f7db929e2",
+      "0x52ce071bd9b1c4b00a0b92d298c512478cad67e8",
+      "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3",
+      "0xad6caeb32cd2c308980a548bd0bc5aa4306c6c18",
+      "0x7083609fce4d1d8dc0c979aab8c869ea2c873402",
+      "0xf8a0bf9cf54bb92f17374d9e9a321e6a111a51bd",
+      "0x55d398326f99059ff775485246999027b3197955",
+      "0xbf5140a22578168fd562dccf235e5d43a02ce9b1",
+      "0x47bead2563dcbf3bf2c9407fea4dc236faba485a",
+      "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+      "0x111111111117dC0aa78b770fA6A738034120C302",
+      "0x88f1a5ae2a3bf98aeaf342d26b30a79438c9142e",
+      "0xfb6115445bff7b52feb98650c87f44907e58f802",
+      "0x9ac983826058b8a9c7aa1c9171441191232e8404",
+      "0x8076c74c5e3f5852037f31ff0093eeb8c8add8d3",
+      "0x5a3010d4d8d3b5fb49f8b6e57fb9e48063f16700",
+      "0xcf6bb5389c92bdda8a3747ddb454cb7a64626c63",
+      "0xe02df9e3e622debdd69fb838bb799e3f168902c5",
+      "0xe4ae305ebe1abe663f261bc00534067c80ad677c",
+      "0xa9c41a46a6b3531d28d5c32f6633dd2ff05dfb90"
+    ],
+    "synup_pools": [
+      "0x4123563fD431fe90061CB821046dC67BF5eD9035"
+    ],
+    "base_coin": "WBNB",
+    "quote_coin": "FAST"
+  },
+  "log_config": {
+    "level": "INFO",
+    "filename": "/home/ubuntu/stats/statas.log",
+    "max_file_size_in_mb": 10,
+    "max_backups_of_log_files": 10,
+    "max_age_to_retain_log_files_in_days": 3,
+    "use_console_logger": false,
+    "use_file_logger": true,
+    "compress": false
+  },
+  "alert_config": {
+    "telegram_bot_id": "",
+    "telegram_chat_id": "",
+    "block_update_timeout": 300
+  },
+  "server_config": {
+    "listen_addr": "0.0.0.0:8080"
+  }
+}

@@ -1,0 +1,37 @@
+version: "2.4"
+
+services: 
+  db:
+    container_name: db
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: 'go-stat-mysql'
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: '123456'
+      MYSQL_ROOT_PASSWORD: '123456'
+
+    ports:
+      # <Port exposed> : < MySQL Port running inside container>
+      - '3306:3306'
+    expose:
+      # Opens port 3306 on the container
+      - '3306'
+      # Where our data will be persisted
+    volumes:
+      - go-stat-mysql:/var/lib/mysql
+    network_mode: host
+
+  backend:
+    depends_on:
+    - db
+    container_name: backend
+    network_mode: host
+    build:
+      context: .
+    restart: on-failure
+
+
+# Names our volume
+volumes:
+  go-stat-mysql:
+

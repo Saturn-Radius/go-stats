@@ -1,0 +1,43 @@
+{
+  "statas_db_config": {
+    "dialect": "mysql",
+    "db_path": "root:123456@(go-stat-mysql:3306)/go-stat-mysql?charset=utf8&parseTime=True&loc=Local"
+  },
+  "chain_config": {
+    "bsc_start_height": 6694220,
+    "bsc_provider": "ws://18.133.119.1:58546",
+    "bsc_confirm_num": 5,
+    "bsc_fetch_interval": 2000,
+    "swap_factory": "0x59DA12BDc470C8e85cA26661Ee3DCD9B85247C88",
+    "reserve": 0.0,
+    "swap_event_topic": "0xd78ad95fa46c994b6551d0da85fc275fe613ce37657fb8d5e3d130840159d822",
+    "bep20": "0xfEA6218871B7851748881a4aF6bCA63Af1B769a8",
+    "certificated_pairs": [
+      "0x542286da86ef1041efd9d02602507c8392c9559b",
+      "0xa2bd048981941e80e8a5d4d2c4d2bea3c927043b"
+    ],
+    "synup_pools": [
+      "0x4123563fD431fe90061CB821046dC67BF5eD9035"
+    ],
+    "base_coin": "WBNB",
+    "quote_coin": "FAST"
+  },
+  "log_config": {
+    "level": "INFO",
+    "filename": "/home/ubuntu/stats/statas.log",
+    "max_file_size_in_mb": 10,
+    "max_backups_of_log_files": 10,
+    "max_age_to_retain_log_files_in_days": 3,
+    "use_console_logger": false,
+    "use_file_logger": true,
+    "compress": false
+  },
+  "alert_config": {
+    "telegram_bot_id": "",
+    "telegram_chat_id": "",
+    "block_update_timeout": 300
+  },
+  "server_config": {
+    "listen_addr": "0.0.0.0:8080"
+  }
+}

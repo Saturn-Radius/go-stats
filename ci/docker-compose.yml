@@ -1,0 +1,33 @@
+version: '3.0'
+
+networks:
+  default:
+    driver: bridge
+    name: go-stat-netowk
+
+
+services: 
+  go-stat-mysql:
+    container_name: go-stat-mysql
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: 'go-stat-mysql'
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: '123456'
+      MYSQL_ROOT_PASSWORD: '123456'
+    ports:
+      - '127.0.0.1:3306:3306'
+    expose:
+      - '3306'
+    volumes:
+      - /media/xvdb/go-stat-mysql:/var/lib/mysql
+
+
+  go-stat-backend:
+    container_name: go-stat-backend
+    image: go-stat-backend:latest
+    ports:
+      - '0.0.0.0:8080:8080'
+    depends_on:
+    - go-stat-mysql
+    restart: on-failure
